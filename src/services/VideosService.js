@@ -12,7 +12,7 @@ function VideosService() {
   this.getVideosId = async (responseLogin = false) => {
     if(responseLogin) headerVideosService = responseLogin.getHeader();
 
-    const response = await fetch(process.env.HOME_PAGE_URL, 
+    const response = await fetch(process.env.PREFIX_VIDEO_URL, 
       {
         method: 'GET',
         headers: (responseLogin) ? headerVideosService.buildHeadersAsObject()
